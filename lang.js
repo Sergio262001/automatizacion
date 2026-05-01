@@ -248,22 +248,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navActions = document.querySelector('.nav-actions');
-    const navbar = document.querySelector('.navbar');
+    
+    // Grab the buttons before any movement happens
+    const signinBtn = document.querySelector('.signin');
+    const getStartedBtn = document.querySelector('.btn-primary.small');
     
     function handleResize() {
-        if (window.innerWidth <= 992 && navMenu && navActions) {
-            if (!navMenu.contains(navActions)) {
-                navMenu.appendChild(navActions);
-                navActions.style.flexDirection = 'column';
-                navActions.style.marginTop = '30px';
-                navActions.style.width = '100%';
+        if (window.innerWidth <= 992 && navMenu) {
+            // Move only the buttons into the mobile menu
+            if (signinBtn && !navMenu.contains(signinBtn)) {
+                navMenu.appendChild(signinBtn);
+                signinBtn.style.marginTop = '20px';
+                signinBtn.style.fontSize = '20px';
             }
-        } else if (window.innerWidth > 992 && navbar && navActions) {
-            if (!navbar.contains(navActions)) {
-                navbar.appendChild(navActions);
-                navActions.style.flexDirection = 'row';
-                navActions.style.marginTop = '0';
-                navActions.style.width = 'auto';
+            if (getStartedBtn && !navMenu.contains(getStartedBtn)) {
+                navMenu.appendChild(getStartedBtn);
+                getStartedBtn.style.marginTop = '15px';
+                getStartedBtn.style.width = '80%';
+                getStartedBtn.style.textAlign = 'center';
+            }
+        } else if (window.innerWidth > 992 && navActions) {
+            // Move buttons back to desktop navbar
+            if (signinBtn && !navActions.contains(signinBtn)) {
+                navActions.appendChild(signinBtn);
+                signinBtn.style.marginTop = '0';
+                signinBtn.style.fontSize = '15px';
+            }
+            if (getStartedBtn && !navActions.contains(getStartedBtn)) {
+                navActions.appendChild(getStartedBtn);
+                getStartedBtn.style.marginTop = '0';
+                getStartedBtn.style.width = 'auto';
             }
         }
     }
