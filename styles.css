@@ -303,21 +303,44 @@ body {
     width: 80% !important;
     text-align: center;
     font-size: 18px !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3) !important;
   }
 
   .mobile-menu-btn {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(243, 244, 246, 0.8);
+    transition: all 0.3s ease;
   }
 
-  /* Hamburger Animation */
+  .mobile-menu-btn:hover {
+    background: #e5e7eb;
+  }
+
+  .mobile-menu-btn span {
+    margin: 3px 0;
+    width: 22px;
+    border-radius: 2px;
+  }
+
+  /* Hamburger Animation (Prettier X) */
   .mobile-menu-btn.open span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+    background: #ef4444; /* red closing X */
   }
   .mobile-menu-btn.open span:nth-child(2) {
     opacity: 0;
+    transform: scale(0);
   }
   .mobile-menu-btn.open span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+    background: #ef4444;
   }
 
   .nav-actions {
