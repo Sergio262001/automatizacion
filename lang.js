@@ -258,26 +258,17 @@ document.addEventListener('DOMContentLoaded', () => {
             // Move only the buttons into the mobile menu
             if (signinBtn && !navMenu.contains(signinBtn)) {
                 navMenu.appendChild(signinBtn);
-                signinBtn.style.marginTop = '20px';
-                signinBtn.style.fontSize = '20px';
             }
             if (getStartedBtn && !navMenu.contains(getStartedBtn)) {
                 navMenu.appendChild(getStartedBtn);
-                getStartedBtn.style.marginTop = '15px';
-                getStartedBtn.style.width = '80%';
-                getStartedBtn.style.textAlign = 'center';
             }
         } else if (window.innerWidth > 992 && navActions) {
             // Move buttons back to desktop navbar
             if (signinBtn && !navActions.contains(signinBtn)) {
                 navActions.appendChild(signinBtn);
-                signinBtn.style.marginTop = '0';
-                signinBtn.style.fontSize = '15px';
             }
             if (getStartedBtn && !navActions.contains(getStartedBtn)) {
                 navActions.appendChild(getStartedBtn);
-                getStartedBtn.style.marginTop = '0';
-                getStartedBtn.style.width = 'auto';
             }
         }
     }

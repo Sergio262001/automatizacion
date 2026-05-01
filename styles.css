@@ -272,6 +272,39 @@ body {
     margin: 15px 0;
   }
 
+  /* Active link in mobile menu */
+  .nav-links a.active {
+    background-color: #2563eb;
+    color: #ffffff !important;
+    padding: 10px 30px;
+    border-radius: 50px;
+  }
+  .nav-links a.active::after {
+    display: none;
+  }
+
+  /* Pill styles for Sign In and Get Started in mobile menu */
+  .nav-links .signin {
+    background-color: rgba(37, 99, 235, 0.08);
+    color: #2563eb !important;
+    border-radius: 50px;
+    padding: 12px 30px;
+    margin-top: 20px;
+    width: 80%;
+    text-align: center;
+    font-size: 18px !important;
+    font-weight: 600;
+  }
+
+  .nav-links .btn-primary {
+    border-radius: 50px !important;
+    padding: 15px 30px !important;
+    margin-top: 15px;
+    width: 80% !important;
+    text-align: center;
+    font-size: 18px !important;
+  }
+
   .mobile-menu-btn {
     display: block;
   }
