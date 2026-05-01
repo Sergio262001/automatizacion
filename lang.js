@@ -94,7 +94,6 @@ const translations = {
 
     // Phase 3: Implementation
     "docs_b_intro_3": "Methodology / Implementation",
-    "docs_h2_3": "Phase 3: Build & Deployment",
     "docs_h2_3": "Phase 3: Implementation & Launch",
     "docs_p2_3": "We build the workflows in a staging environment first to verify every branch and logic condition.",
     "docs_trig_title_3": "The Quality Audit",
@@ -244,6 +243,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     applyLanguage(savedLang);
+
+    // Mobile Menu Toggle
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('open');
+            navMenu.classList.toggle('active');
+            
+            // Prevent scrolling when menu is open
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close menu when clicking a link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('open');
+                navMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
 });
 
 function applyLanguage(lang) {
@@ -252,7 +278,6 @@ function applyLanguage(lang) {
 
     elements.forEach(el => {
         const key = el.getAttribute('data-i18n');
-        // Handle dynamic phase keys if they exist
         const currentPhase = window.currentPhase || 1;
         const dynamicKey = `${key}_${currentPhase}`;
         
