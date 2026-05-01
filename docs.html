@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Documentation - AutoFlow</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+ .docs-container { display: flex; max-width: 1200px; margin: 40px auto; gap: 40px; padding: 0 20px; }
+ .docs-sidebar { width: 250px; border-right: 1px solid #e2e8f0; padding-right: 20px; }
+ .docs-sidebar h4 { font-size: 14px; text-transform: uppercase; color: #64748b; margin-bottom: 15px; margin-top: 20px; }
+ .docs-sidebar ul { list-style: none; padding: 0; }
+ .docs-sidebar li a { color: #0f172a; text-decoration: none; padding: 8px 0; display: block; font-size: 15px; border-radius: 6px; }
+ .docs-sidebar li a:hover { color: #2563eb; background: #f8fafc; padding-left: 5px; transition: 0.2s;}
+ .docs-content { flex: 1; }
+ .docs-content h1 { font-size: 36px; margin-bottom: 20px; }
+ .docs-content h2 { font-size: 24px; margin-top: 40px; margin-bottom: 15px; }
+ .docs-content p { color: #475569; font-size: 16px; line-height: 1.8; margin-bottom: 20px; }
+ .docs-callout { background: #e0ecff; border-left: 4px solid #2563eb; padding: 15px 20px; border-radius: 0 8px 8px 0; margin-bottom: 20px; }
+ .docs-callout h3 { color: #1d4ed8; font-size: 18px; margin-bottom: 8px; }
+ .docs-callout p { color: #1e3a8a; margin: 0; font-size: 15px; }
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html" style="text-decoration:none; color:inherit;">⚡ <span>AutoFlow</span></a>
+  </div>
+  <nav class="nav-links">
+    <a href="features.html" data-i18n="nav_features">Features</a>
+    <a href="integrations.html" data-i18n="nav_integrations">Integrations</a>
+    <a href="pricing.html" data-i18n="nav_pricing">Pricing</a>
+    <a href="docs.html" data-i18n="nav_docs">Docs</a>
+  </nav>
+  <div class="nav-actions">
+    <select id="lang-switch" class="lang-selector">
+      <option value="en">EN</option>
+      <option value="es">ES</option>
+    </select>
+    <a href="signin.html" class="signin" data-i18n="nav_signin">Sign In</a>
+    <a href="get-started.html" class="btn-primary small" data-i18n="nav_getstarted">Get Started</a>
+  </div>
+</header>
+<main class="docs-container">
+  <aside class="docs-sidebar">
+    <h4 style="margin-top:0" data-i18n="docs_sb_1">Getting Started</h4>
+    <ul>
+      <li><a href="#" style="color:#2563eb; font-weight:600;" data-i18n="docs_sb_intro">Introduction</a></li>
+      <li><a href="#" data-i18n="docs_sb_quick">Quickstart Guide</a></li>
+      <li><a href="#" data-i18n="docs_sb_first">Your First Workflow</a></li>
+    </ul>
+    <h4 data-i18n="docs_sb_2">Concepts</h4>
+    <ul>
+      <li><a href="#" data-i18n="docs_sb_trig">Triggers</a></li>
+      <li><a href="#" data-i18n="docs_sb_act">Actions</a></li>
+      <li><a href="#" data-i18n="docs_sb_cond">Conditional Logic</a></li>
+      <li><a href="#" data-i18n="docs_sb_var">Variables & Data</a></li>
+    </ul>
+  </aside>
+  <div class="docs-content">
+    <div style="color: #3b82f6; font-size: 14px; margin-bottom: 8px;font-weight:600;" data-i18n="docs_b_intro">Getting Started / Introduction</div>
+    <h1 data-i18n="docs_h1">Introduction to AutoFlow</h1>
+    
+    <p data-i18n="docs_p1">
+      AutoFlow is a powerful, visual automation tool designed to connect your favorite apps and move data between them automatically. 
+      Whether you want to send a Slack notification when a new Shopify order comes in, or automatically add lead data from Facebook Ads to your Salesforce CRM, AutoFlow handles the heavy lifting.
+    </p>
+
+    <h2 data-i18n="docs_h2">How it Works</h2>
+    <p data-i18n="docs_p2">
+      Every automation in AutoFlow is called a <strong>Workflow</strong>. A workflow consists of two main parts:
+    </p>
+
+    <div class="docs-callout">
+      <h3 data-i18n="docs_trig_title">1. The Trigger</h3>
+      <p data-i18n="docs_trig_p">This is the event that starts the workflow. For example: "When a new row is added to Google Sheets".</p>
+    </div>
+
+    <div class="docs-callout" style="background: #dcfce7; border-left-color: #10b981;">
+      <h3 style="color: #047857;" data-i18n="docs_act_title">2. The Action</h3>
+      <p style="color: #064e3b;" data-i18n="docs_act_p">This is the task AutoFlow performs after the trigger happens. For example: "Send an email via Gmail".</p>
+    </div>
+
+    <p data-i18n="docs_p3">
+      When you're ready, move on to the <strong>Quickstart Guide</strong> to build your very first workflow from scratch.
+    </p>
+
+    <div style="display: flex; justify-content: flex-end; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0;">
+      <button class="btn-primary" style="cursor:pointer;border:none;" data-i18n="docs_btn">Next: Quickstart Guide →</button>
+    </div>
+  </div>
+</main>
+<script src="lang.js"></script>
+</body>
+</html>

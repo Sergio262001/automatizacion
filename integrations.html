@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Integrations - AutoFlow</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-container { max-width: 1200px; margin: 60px auto; padding: 0 20px; text-align: center; }
+    .page-header h1 { font-size: 42px; margin-bottom: 15px; }
+    .page-header p { color: #64748b; font-size: 18px; max-width: 600px; margin: 0 auto 50px auto; }
+    .integrations-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .integration-item { display:flex; align-items:center; gap: 10px; background: #fff; padding: 15px 25px; border-radius: 8px; border: 1px solid #e2e8f0; font-weight: 500; font-size: 16px; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); }
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <div class="logo">
+    <a href="index.html" style="text-decoration:none; color:inherit;">⚡ <span>AutoFlow</span></a>
+  </div>
+  <nav class="nav-links">
+    <a href="features.html" data-i18n="nav_features">Features</a>
+    <a href="integrations.html" data-i18n="nav_integrations">Integrations</a>
+    <a href="pricing.html" data-i18n="nav_pricing">Pricing</a>
+    <a href="docs.html" data-i18n="nav_docs">Docs</a>
+  </nav>
+  <div class="nav-actions">
+    <select id="lang-switch" class="lang-selector">
+      <option value="en">EN</option>
+      <option value="es">ES</option>
+    </select>
+    <a href="signin.html" class="signin" data-i18n="nav_signin">Sign In</a>
+    <a href="get-started.html" class="btn-primary small" data-i18n="nav_getstarted">Get Started</a>
+  </div>
+</header>
+<main class="page-container">
+  <div class="page-header">
+    <h1 data-i18n="int_h1">Connect any App</h1>
+    <p data-i18n="int_p">Over 100+ native integrations available. Connect the tools you already use every day.</p>
+  </div>
+  <div class="integrations-list">
+    <div class="integration-item">💬 Slack</div>
+    <div class="integration-item">🛍️ Shopify</div>
+    <div class="integration-item">📧 Gmail</div>
+    <div class="integration-item">📊 Google Sheets</div>
+    <div class="integration-item">📝 Notion</div>
+    <div class="integration-item">💼 Salesforce</div>
+    <div class="integration-item">📈 HubSpot</div>
+    <div class="integration-item">📅 Calendly</div>
+    <div class="integration-item">💳 Stripe</div>
+  </div>
+</main>
+<script src="lang.js"></script>
+</body>
+</html>
