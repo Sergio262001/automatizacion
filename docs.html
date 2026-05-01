@@ -30,7 +30,7 @@
     <a href="features.html" data-i18n="nav_features">Features</a>
     <a href="integrations.html" data-i18n="nav_integrations">Integrations</a>
     <a href="pricing.html" data-i18n="nav_pricing">Pricing</a>
-    <a href="docs.html" data-i18n="nav_docs">Docs</a>
+    <a href="docs.html" class="active" data-i18n="nav_docs">Docs</a>
   </nav>
   <div class="nav-actions">
     <select id="lang-switch" class="lang-selector">
@@ -43,53 +43,98 @@
 </header>
 <main class="docs-container">
   <aside class="docs-sidebar">
-    <h4 style="margin-top:0" data-i18n="docs_sb_1">Getting Started</h4>
+    <h4 style="margin-top:0" data-i18n="docs_sb_1">How We Work</h4>
     <ul>
-      <li><a href="#" style="color:#2563eb; font-weight:600;" data-i18n="docs_sb_intro">Introduction</a></li>
-      <li><a href="#" data-i18n="docs_sb_quick">Quickstart Guide</a></li>
-      <li><a href="#" data-i18n="docs_sb_first">Your First Workflow</a></li>
+      <li><a href="#" style="color:#2563eb; font-weight:600;" data-i18n="docs_sb_intro">1. Discovery</a></li>
+      <li><a href="#" data-i18n="docs_sb_quick">2. Architecture Design</a></li>
+      <li><a href="#" data-i18n="docs_sb_first">3. Implementation</a></li>
     </ul>
-    <h4 data-i18n="docs_sb_2">Concepts</h4>
+    <h4 data-i18n="docs_sb_2">Working Together</h4>
     <ul>
-      <li><a href="#" data-i18n="docs_sb_trig">Triggers</a></li>
-      <li><a href="#" data-i18n="docs_sb_act">Actions</a></li>
-      <li><a href="#" data-i18n="docs_sb_cond">Conditional Logic</a></li>
-      <li><a href="#" data-i18n="docs_sb_var">Variables & Data</a></li>
+      <li><a href="#" data-i18n="docs_sb_trig">Onboarding</a></li>
+      <li><a href="#" data-i18n="docs_sb_act">Communication</a></li>
+      <li><a href="#" data-i18n="docs_sb_cond">Handover</a></li>
+      <li><a href="#" data-i18n="docs_sb_var">Support</a></li>
     </ul>
   </aside>
   <div class="docs-content">
-    <div style="color: #3b82f6; font-size: 14px; margin-bottom: 8px;font-weight:600;" data-i18n="docs_b_intro">Getting Started / Introduction</div>
-    <h1 data-i18n="docs_h1">Introduction to AutoFlow</h1>
+    <div style="color: #3b82f6; font-size: 14px; margin-bottom: 8px;font-weight:600;" data-i18n="docs_b_intro">Methodology / Discovery</div>
+    <h1 data-i18n="docs_h1">Our Implementation Process</h1>
     
     <p data-i18n="docs_p1">
-      AutoFlow is a powerful, visual automation tool designed to connect your favorite apps and move data between them automatically. 
-      Whether you want to send a Slack notification when a new Shopify order comes in, or automatically add lead data from Facebook Ads to your Salesforce CRM, AutoFlow handles the heavy lifting.
+      Building enterprise-grade automations requires a structured approach. We don't just connect apps; we re-engineer your operational workflows to maximize efficiency.
     </p>
 
-    <h2 data-i18n="docs_h2">How it Works</h2>
-    <p data-i18n="docs_p2">
-      Every automation in AutoFlow is called a <strong>Workflow</strong>. A workflow consists of two main parts:
+    <h2 data-i18n="docs_h2" id="phase-title">Phase 1: Discovery & Audit</h2>
+    <p data-i18n="docs_p2" id="phase-desc">
+      Before writing any code or setting up webhooks, we must fully understand your business logic.
     </p>
 
     <div class="docs-callout">
-      <h3 data-i18n="docs_trig_title">1. The Trigger</h3>
-      <p data-i18n="docs_trig_p">This is the event that starts the workflow. For example: "When a new row is added to Google Sheets".</p>
+      <h3 data-i18n="docs_trig_title">The Workflow Interview</h3>
+      <p data-i18n="docs_trig_p">We sit down with your key stakeholders to map out the current manual processes, pain points, and bottlenecks.</p>
     </div>
 
-    <div class="docs-callout" style="background: #dcfce7; border-left-color: #10b981;">
-      <h3 style="color: #047857;" data-i18n="docs_act_title">2. The Action</h3>
-      <p style="color: #064e3b;" data-i18n="docs_act_p">This is the task AutoFlow performs after the trigger happens. For example: "Send an email via Gmail".</p>
+    <div class="docs-callout" style="background: #eff6ff; border-left-color: #3b82f6;">
+      <h3 style="color: #1d4ed8;" data-i18n="docs_act_title">The Architecture Blueprint</h3>
+      <p style="color: #1e3a8a;" data-i18n="docs_act_p">We deliver a comprehensive diagram showing exactly how data will flow across your systems, detailing all triggers and actions.</p>
     </div>
 
     <p data-i18n="docs_p3">
-      When you're ready, move on to the <strong>Quickstart Guide</strong> to build your very first workflow from scratch.
+      Once the blueprint is approved, we move to the build phase.
     </p>
 
     <div style="display: flex; justify-content: flex-end; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e2e8f0;">
-      <button class="btn-primary" style="cursor:pointer;border:none;" data-i18n="docs_btn">Next: Quickstart Guide →</button>
+      <button class="btn-primary" id="next-phase-btn" style="cursor:pointer;border:none;" onclick="nextPhase()" data-i18n="docs_btn">Next: Architecture Design →</button>
     </div>
   </div>
 </main>
 <script src="lang.js"></script>
+<script>
+  window.currentPhase = 1;
+
+  function setPhase(n) {
+    window.currentPhase = n;
+    
+    // Update sidebar active state
+    const links = document.querySelectorAll('.docs-sidebar ul li a');
+    links.forEach((link, index) => {
+      if (index === n - 1) {
+        link.style.color = '#2563eb';
+        link.style.fontWeight = '600';
+      } else {
+        link.style.color = '#0f172a';
+        link.style.fontWeight = '400';
+      }
+    });
+
+    // Re-apply language to trigger dynamic keys
+    const lang = localStorage.getItem('app_lang') || 'en';
+    if (typeof applyLanguage === 'function') {
+      applyLanguage(lang);
+    }
+
+    // Scroll to top of content
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function nextPhase() {
+    if (window.currentPhase < 3) {
+      setPhase(window.currentPhase + 1);
+    } else {
+      window.location.href = 'get-started.html';
+    }
+  }
+
+  // Update sidebar links to use setPhase
+  document.addEventListener('DOMContentLoaded', () => {
+    const sidebarLinks = document.querySelectorAll('.docs-sidebar ul:first-of-type li a');
+    sidebarLinks.forEach((link, index) => {
+      link.removeAttribute('href');
+      link.style.cursor = 'pointer';
+      link.onclick = () => setPhase(index + 1);
+    });
+  });
+</script>
 </body>
 </html>

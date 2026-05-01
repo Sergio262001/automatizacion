@@ -66,17 +66,43 @@ const translations = {
     "docs_sb_act": "Communication",
     "docs_sb_cond": "Handover",
     "docs_sb_var": "Support",
-    "docs_b_intro": "Methodology / Discovery",
+
     "docs_h1": "Our Implementation Process",
     "docs_p1": "Building enterprise-grade automations requires a structured approach. We don't just connect apps; we re-engineer your operational workflows to maximize efficiency.",
-    "docs_h2": "Phase 1: Discovery & Audit",
-    "docs_p2": "Before writing any code or setting up webhooks, we must fully understand your business logic.",
-    "docs_trig_title": "The Workflow Interview",
-    "docs_trig_p": "We sit down with your key stakeholders to map out the current manual processes, pain points, and bottlenecks.",
-    "docs_act_title": "The Architecture Blueprint",
-    "docs_act_p": "We deliver a comprehensive diagram showing exactly how data will flow across your systems, detailing all triggers and actions.",
-    "docs_p3": "Once the blueprint is approved, we move to the build phase.",
-    "docs_btn": "Next: Architecture Design →",
+    
+    // Phase 1: Discovery
+    "docs_b_intro_1": "Methodology / Discovery",
+    "docs_h2_1": "Phase 1: Discovery & Audit",
+    "docs_p2_1": "Before writing any code or setting up webhooks, we must fully understand your business logic.",
+    "docs_trig_title_1": "The Workflow Interview",
+    "docs_trig_p_1": "We sit down with your key stakeholders to map out the current manual processes, pain points, and bottlenecks.",
+    "docs_act_title_1": "The Architecture Blueprint",
+    "docs_act_p_1": "We deliver a comprehensive diagram showing exactly how data will flow across your systems, detailing all triggers and actions.",
+    "docs_p3_1": "Once the blueprint is approved, we move to the build phase.",
+    "docs_btn_1": "Next: Architecture Design →",
+
+    // Phase 2: Design
+    "docs_b_intro_2": "Methodology / Architecture Design",
+    "docs_h2_2": "Phase 2: Architecture & Flow Design",
+    "docs_p2_2": "This is where we map every connection, API call, and data transformation required.",
+    "docs_trig_title_2": "System Mapping",
+    "docs_trig_p_2": "We define every technical requirement for each platform (Shopify, ERP, CRM) to ensure data integrity.",
+    "docs_act_title_2": "Error Handling Strategy",
+    "docs_act_p_2": "We design fallback mechanisms so if a tool goes down, your data is buffered and retried automatically.",
+    "docs_p3_2": "With the map finalized, we start the actual build.",
+    "docs_btn_2": "Next: Implementation →",
+
+    // Phase 3: Implementation
+    "docs_b_intro_3": "Methodology / Implementation",
+    "docs_h2_3": "Phase 3: Build & Deployment",
+    "docs_h2_3": "Phase 3: Implementation & Launch",
+    "docs_p2_3": "We build the workflows in a staging environment first to verify every branch and logic condition.",
+    "docs_trig_title_3": "The Quality Audit",
+    "docs_trig_p_3": "Rigorous stress testing with real-world data scenarios to ensure 99.9% reliability.",
+    "docs_act_title_3": "Team Handover",
+    "docs_act_p_3": "We provide documentation and training so your team knows exactly how the new system operates.",
+    "docs_p3_3": "Your new automated operation is now live and scaling.",
+    "docs_btn_3": "Start Your Project →",
 
     "auth_h2_in": "Client Portal",
     "auth_h2_up": "Request an Audit",
@@ -153,17 +179,43 @@ const translations = {
     "docs_sb_act": "Comunicación",
     "docs_sb_cond": "Entrega (Handover)",
     "docs_sb_var": "Soporte",
-    "docs_b_intro": "Metodología / Descubrimiento",
+
     "docs_h1": "Nuestro Proceso de Implementación",
     "docs_p1": "Construir automatizaciones de nivel empresarial requiere un enfoque estructurado. No solo conectamos aplicaciones; re-diseñamos tus flujos de trabajo operativos para maximizar la eficiencia y reducir errores.",
-    "docs_h2": "Fase 1: Auditoría y Descubrimiento",
-    "docs_p2": "Antes de escribir una sola línea de código o configurar webhooks, debemos comprender por completo la lógica detrás de tu negocio.",
-    "docs_trig_title": "Entrevistas de Diagnóstico",
-    "docs_trig_p": "Nos sentamos con tu equipo para mapear los procesos manuales actuales, puntos de dolor y cuellos de botella.",
-    "docs_act_title": "Plano de Arquitectura (Blueprint)",
-    "docs_act_p": "Te entregamos un diagrama exhaustivo que muestra exactamente cómo fluirán los datos entre tus sistemas.",
-    "docs_p3": "Una vez aprobado el Blueprint, pasamos oficialmente a la fase de ensamblaje e implementación.",
-    "docs_btn": "Siguiente: Diseño de Arquitectura →",
+    
+    // Fase 1: Descubrimiento
+    "docs_b_intro_1": "Metodología / Descubrimiento",
+    "docs_h2_1": "Fase 1: Auditoría y Descubrimiento",
+    "docs_p2_1": "Antes de escribir una sola línea de código o configurar webhooks, debemos comprender por completo la lógica detrás de tu negocio.",
+    "docs_trig_title_1": "Entrevistas de Diagnóstico",
+    "docs_trig_p_1": "Nos sentamos con tu equipo para mapear los procesos manuales actuales, puntos de dolor y cuellos de botella.",
+    "docs_act_title_1": "Plano de Arquitectura (Blueprint)",
+    "docs_act_p_1": "Te entregamos un diagrama exhaustivo que muestra exactamente cómo fluirán los datos entre tus sistemas.",
+    "docs_p3_1": "Una vez aprobado el Blueprint, pasamos oficialmente a la fase de ensamblaje e implementación.",
+    "docs_btn_1": "Siguiente: Diseño de Arquitectura →",
+
+    // Fase 2: Diseño
+    "docs_b_intro_2": "Metodología / Diseño de Arquitectura",
+    "docs_h2_2": "Fase 2: Diseño de Arquitectura y Flujos",
+    "docs_p2_2": "Aquí es donde mapeamos cada conexión, llamada de API y transformación de datos necesaria.",
+    "docs_trig_title_2": "Mapeo de Sistemas",
+    "docs_trig_p_2": "Definimos cada requerimiento técnico para cada plataforma (Shopify, ERP, CRM) para asegurar la integridad de los datos.",
+    "docs_act_title_2": "Estrategia de Errores",
+    "docs_act_p_2": "Diseñamos mecanismos de respaldo para que, si una herramienta falla, tus datos se guarden y reintenten automáticamente.",
+    "docs_p3_2": "Con el mapa finalizado, comenzamos la construcción real.",
+    "docs_btn_2": "Siguiente: Implementación →",
+
+    // Fase 3: Implementación
+    "docs_b_intro_3": "Metodología / Implementación",
+    "docs_h2_3": "Fase 3: Construcción y Despliegue",
+    "docs_p2_3": "Construimos los flujos en un entorno de pruebas primero para verificar cada rama y condición lógica.",
+    "docs_trig_title_3": "Auditoría de Calidad",
+    "docs_trig_p_3": "Pruebas de estrés rigurosas con escenarios de datos reales para asegurar un 99.9% de confiabilidad.",
+    "docs_act_title_3": "Entrega al Equipo",
+    "docs_act_p_3": "Proporcionamos documentación y capacitación para que tu equipo sepa exactamente cómo opera el nuevo sistema.",
+    "docs_p3_3": "Tu nueva operación automatizada ahora está en vivo y escalando.",
+    "docs_btn_3": "Comenzar Proyecto →",
+
     "auth_h2_in": "Portal de Clientes",
     "auth_h2_up": "Solicitar Auditoría",
     "auth_lbl_name": "Nombre Completo",
@@ -200,7 +252,13 @@ function applyLanguage(lang) {
 
     elements.forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (t[key]) {
+        // Handle dynamic phase keys if they exist
+        const currentPhase = window.currentPhase || 1;
+        const dynamicKey = `${key}_${currentPhase}`;
+        
+        if (t[dynamicKey]) {
+            el.innerHTML = t[dynamicKey];
+        } else if (t[key]) {
             el.innerHTML = t[key];
         }
     });
